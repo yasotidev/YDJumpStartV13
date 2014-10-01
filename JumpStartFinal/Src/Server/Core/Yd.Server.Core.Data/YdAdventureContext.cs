@@ -24,9 +24,10 @@ namespace Yd.Server.Core.Data
         }
 
         public DbSet<Person> Persons { get; set; }
+        public DbSet<Address> Addresses { get; set; }
+        public DbSet<AddressType> AddressTypes { get; set; }
         public DbSet<Employee> Employees { get; set; }
-        public DbSet<EmployeePicture> EmployeePictures { get; set; }
-
+        public DbSet<EmployeePicture> EmployeePictures { get; set; }     
         public DbSet<Team> Teams { get; set; }
         public DbSet<Expense> Expenses { get; set; }
 

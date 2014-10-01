@@ -3,7 +3,7 @@
 namespace Yd.Server.Core.Model
 {
     public class Team
-    {
+    {      
         public int TeamId { get; set; }
         public int? ManagerId { get; set; }
         public virtual Employee Manager { get; set; }
