@@ -44,6 +44,7 @@
     <Compile Include="AddressType.cs" />
     <Compile Include="Calendar.cs" />
     <Compile Include="Employee.cs" />
+    <Compile Include="EmployeeInfo.cs" />
     <Compile Include="EmployeePicture.cs" />
     <Compile Include="Expense.cs" />
     <Compile Include="HolidayCalendar.cs" />

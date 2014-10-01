@@ -13,11 +13,13 @@ namespace Yd.Server.Core.Model
         public virtual JobTitle JobTitle { get; set; }
         public int? TeamId { get; set; }
         public virtual Team Team { get; set; }
-        public int? AddressId { get; set; }
-        public virtual Address Address { get; set; }
+        //public int? AddressId { get; set; }
+        //public virtual Address Address { get; set; }
 
         public virtual ICollection<EmployeePicture> EmployeePictures { get; set; }
         public virtual ICollection<Expense> Expenses { get; set; }
         public virtual ICollection<Vaccation> Vaccations { get; set; }
+        public virtual ICollection<EmployeeInfo> EmployeeInfos { get; set; }
+
     }
 }

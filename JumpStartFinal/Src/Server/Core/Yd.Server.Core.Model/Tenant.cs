@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Yd.Server.Core.Model
+﻿namespace Yd.Server.Core.Model
 {
     public class Tenant
     {
