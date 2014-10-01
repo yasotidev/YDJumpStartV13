@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using Yd.Server.Core.Model;
 
 namespace Yd.Server.Core.Data
 {
     public class YdAdventureContext : DbContext
     {
-        public YdAdventureContext():base("YdAdventureEntities")
+        public YdAdventureContext()
+            :base("YdAdventureEntities")
         {
             
         }
@@ -30,6 +25,8 @@ namespace Yd.Server.Core.Data
         public DbSet<EmployeePicture> EmployeePictures { get; set; }     
         public DbSet<Team> Teams { get; set; }
         public DbSet<Expense> Expenses { get; set; }
-
+        public DbSet<Calendar> Calendars { get; set; }
+        public DbSet<HolidayCalendar> HolidayCalendars { get; set; }
+        public DbSet<Vaccation> Vaccations { get; set; }
     }
 }

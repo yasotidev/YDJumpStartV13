@@ -18,5 +18,6 @@ namespace Yd.Server.Core.Model
 
         public virtual ICollection<EmployeePicture> EmployeePictures { get; set; }
         public virtual ICollection<Expense> Expenses { get; set; }
+        public virtual ICollection<Vaccation> Vaccations { get; set; }
     }
 }

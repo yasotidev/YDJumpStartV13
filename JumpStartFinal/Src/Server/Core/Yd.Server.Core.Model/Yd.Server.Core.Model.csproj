@@ -42,14 +42,18 @@
   <ItemGroup>
     <Compile Include="Address.cs" />
     <Compile Include="AddressType.cs" />
+    <Compile Include="Calendar.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="EmployeePicture.cs" />
     <Compile Include="Expense.cs" />
+    <Compile Include="HolidayCalendar.cs" />
     <Compile Include="JobTitle.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="PictureType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Team.cs" />
+    <Compile Include="Vaccation.cs" />
+    <Compile Include="VaccationStatus.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
