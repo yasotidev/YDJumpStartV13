@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8B8E6DCA-63B6-413D-9D40-14E61D2085D9}</ProjectGuid>
+    <ProjectGuid>{048559EB-B4D6-4699-A9CE-C761C230C335}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Yd.Server.Core.Model</RootNamespace>
-    <AssemblyName>Yd.Server.Core.Model</AssemblyName>
+    <RootNamespace>Yd.Admin.Web.Core</RootNamespace>
+    <AssemblyName>Yd.Admin.Web.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -20,7 +20,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,8 +30,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\..\..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\..\..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Tokens.ValidatingIssuerNameRegistry">
+      <HintPath>..\..\..\..\packages\System.IdentityModel.Tokens.ValidatingIssuerNameRegistry.4.5.1\lib\net45\System.IdentityModel.Tokens.ValidatingIssuerNameRegistry.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,22 +50,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Address.cs" />
-    <Compile Include="AddressType.cs" />
-    <Compile Include="Calendar.cs" />
-    <Compile Include="Employee.cs" />
-    <Compile Include="EmployeePicture.cs" />
-    <Compile Include="Expense.cs" />
-    <Compile Include="HolidayCalendar.cs" />
-    <Compile Include="IssuingAuthorityKey.cs" />
-    <Compile Include="JobTitle.cs" />
-    <Compile Include="Person.cs" />
-    <Compile Include="PictureType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Team.cs" />
-    <Compile Include="Tenant.cs" />
-    <Compile Include="Vaccation.cs" />
-    <Compile Include="VaccationStatus.cs" />
+    <Compile Include="SingleTenantIssuerNameRegistry.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Server\Core\Yd.Server.Core.Data\Yd.Server.Core.Data.csproj">
+      <Project>{9037bb8a-7d89-46a4-84d8-d451309b31d4}</Project>
+      <Name>Yd.Server.Core.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Server\Core\Yd.Server.Core.Model\Yd.Server.Core.Model.csproj">
+      <Project>{8b8e6dca-63b6-413d-9d40-14e61d2085d9}</Project>
+      <Name>Yd.Server.Core.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

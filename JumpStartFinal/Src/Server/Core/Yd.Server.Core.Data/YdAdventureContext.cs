@@ -18,6 +18,8 @@ namespace Yd.Server.Core.Data
             base.OnModelCreating(modelBuilder);
         }
 
+        public DbSet<IssuingAuthorityKey> IssuingAuthorityKeys { get; set; }
+        public DbSet<Tenant> Tenants { get; set; }
         public DbSet<Person> Persons { get; set; }
         public DbSet<Address> Addresses { get; set; }
         public DbSet<AddressType> AddressTypes { get; set; }
