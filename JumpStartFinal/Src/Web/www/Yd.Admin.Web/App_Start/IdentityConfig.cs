@@ -4,7 +4,6 @@ using System.IdentityModel.Claims;
 using System.IdentityModel.Services;
 using System.Linq;
 using System.Web.Helpers;
-using Yd.Admin.Web.Core;
 using Yd.Admin.Web.Core.Helpers;
 
 namespace Yd.Admin.Web
