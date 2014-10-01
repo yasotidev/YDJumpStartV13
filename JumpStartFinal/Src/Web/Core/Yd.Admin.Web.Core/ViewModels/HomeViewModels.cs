@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace Yd.Admin.Web.Models
+﻿namespace Yd.Admin.Web.Core.ViewModels
 {
     public class UserProfile
     {

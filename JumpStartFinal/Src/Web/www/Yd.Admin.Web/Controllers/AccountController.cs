@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity.Validation;
 using System.IdentityModel.Services;
 using System.IdentityModel.Services.Configuration;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
-using Microsoft.AspNet.Identity;
-using Yd.Admin.Web.Models;
 
 namespace Yd.Admin.Web.Controllers
 {

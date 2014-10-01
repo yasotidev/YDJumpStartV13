@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IdentityModel.Tokens;
+﻿using System.IdentityModel.Tokens;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Web;
-using System.Web.Hosting;
-using System.Xml.Linq;
-using Yd.Admin.Web.Models;
+using Yd.Server.Core.Data;
+using Yd.Server.Core.Model;
 
-namespace Yd.Admin.Web.Utils
+namespace Yd.Admin.Web.Core.Helpers
 {
     public class SingleTenantIssuerNameRegistry : ValidatingIssuerNameRegistry
     {
         public static bool ContainsTenant(string tenantId)
         {
-            using (TenantDbContext context = new TenantDbContext())
+            using (var context = new YdAdventureContext())
             {
                 return context.Tenants
                     .Where(tenant => tenant.Id == tenantId)
@@ -24,7 +19,7 @@ namespace Yd.Admin.Web.Utils
 
         public static bool ContainsKey(string thumbprint)
         {
-            using (TenantDbContext context = new TenantDbContext())
+            using (var context = new YdAdventureContext())
             {
                 return context.IssuingAuthorityKeys
                     .Where(key => key.Id == thumbprint)
@@ -34,11 +29,11 @@ namespace Yd.Admin.Web.Utils
 
         public static void RefreshKeys(string metadataLocation)
         {
-            IssuingAuthority issuingAuthority = ValidatingIssuerNameRegistry.GetIssuingAuthority(metadataLocation);
+            var issuingAuthority = ValidatingIssuerNameRegistry.GetIssuingAuthority(metadataLocation);
 
-            bool newKeys = false;
-            bool refreshTenant = false;
-            foreach (string thumbprint in issuingAuthority.Thumbprints)
+            var newKeys = false;
+            var refreshTenant = false;
+            foreach (var thumbprint in issuingAuthority.Thumbprints)
             {
                 if (!ContainsKey(thumbprint))
                 {
@@ -48,7 +43,7 @@ namespace Yd.Admin.Web.Utils
                 }
             }
 
-            foreach (string issuer in issuingAuthority.Issuers)
+            foreach (var issuer in issuingAuthority.Issuers)
             {
                 if (!ContainsTenant(GetIssuerId(issuer)))
                 {
@@ -59,12 +54,12 @@ namespace Yd.Admin.Web.Utils
 
             if (newKeys || refreshTenant)
             {
-                using (TenantDbContext context = new TenantDbContext())
+                using (var context = new YdAdventureContext())
                 {
                     if (newKeys)
                     {
                       context.IssuingAuthorityKeys.RemoveRange(context.IssuingAuthorityKeys);
-                      foreach (string thumbprint in issuingAuthority.Thumbprints)
+                      foreach (var thumbprint in issuingAuthority.Thumbprints)
                       {
                           context.IssuingAuthorityKeys.Add(new IssuingAuthorityKey { Id = thumbprint });
                       }
@@ -72,9 +67,9 @@ namespace Yd.Admin.Web.Utils
 
                     if (refreshTenant)
                     {
-                        foreach (string issuer in issuingAuthority.Issuers)
+                        foreach (var issuer in issuingAuthority.Issuers)
                         {
-                            string issuerId = GetIssuerId(issuer);
+                            var issuerId = GetIssuerId(issuer);
                             if (!ContainsTenant(issuerId))
                             {
                                 context.Tenants.Add(new Tenant { Id = issuerId });
