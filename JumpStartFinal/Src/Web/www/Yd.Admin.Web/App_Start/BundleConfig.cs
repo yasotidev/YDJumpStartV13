@@ -23,12 +23,22 @@ namespace Yd.Admin.Web
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/bootstrap.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/Vendorjs")
+                .Include("~/Scripts/foundation.min.js")       
+                .Include("~/Scripts/fastclick.js")  
+                .Include("~/Scripts/placeholder.js")
+                       );
 
             bundles.Add(new StyleBundle("~/Content/Vendorcss")
-                .Include("~/Content/navs.css")  
-                .Include("~/Content/navs.css")
+                .Include("~/Content/app.css")  
+                .Include("~/Content/navs.css")       
+                .Include("~/Content/buttons.css")   
+                .Include("~/Content/footer.css")    
+                .Include("~/Content/Yd-response.css")    
+                .Include("~/Content/foundation.min.css")
+
                      );
 
             // Définissez EnableOptimizations sur False pour le débogage. Pour plus d'informations,

@@ -1,0 +1,28 @@
+﻿footer span {
+    font-size: 0.67em;
+    color: #999;
+    padding: 0px;
+}
+
+    footer span a:hover {
+        text-decoration: underline;
+    }
+
+footer a:hover .icon {
+    color: #46bcec;
+}
+
+footer .icon {
+    font-size: 1.6em;
+    color: #444;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+    footer .icon.fontello-dot {
+        margin-left: 3px;
+        margin-right: 3px;
+        color: #d8dbe1;
+    }

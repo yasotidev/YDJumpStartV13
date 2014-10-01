@@ -1,0 +1,139 @@
+﻿.effect {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+    .effect.flipInY {
+        -webkit-backface-visibility: visible;
+        -webkit-animation-name: flipInY;
+        -moz-backface-visibility: visible;
+        -moz-animation-name: flipInY;
+        -o-backface-visibility: visible;
+        -o-animation-name: flipInY;
+        backface-visibility: visible;
+        animation-name: flipInY;
+    }
+
+    .effect.fadeIn {
+        -webkit-animation-name: fadeIn;
+        -moz-animation-name: fadeIn;
+        -o-animation-name: fadeIn;
+        animation-name: fadeIn;
+    }
+
+    .effect.fadeInDown {
+        -webkit-animation-name: fadeInDown;
+        -moz-animation-name: fadeInDown;
+        -o-animation-name: fadeInDown;
+        animation-name: fadeInDown;
+    }
+
+    .effect.fadeInLeft {
+        -webkit-animation-name: fadeInLeft;
+        -moz-animation-name: fadeInLeft;
+        -o-animation-name: fadeInLeft;
+        animation-name: fadeInLeft;
+    }
+
+    .effect.fadeInRight {
+        -webkit-animation-name: fadeInRight;
+        -moz-animation-name: fadeInRight;
+        -o-animation-name: fadeInRight;
+        animation-name: fadeInRight;
+    }
+
+    .effect.bounceIn {
+        -webkit-animation-name: bounceIn;
+        -moz-animation-name: bounceIn;
+        -o-animation-name: bounceIn;
+        animation-name: bounceIn;
+    }
+
+    .effect.bounceInDown {
+        -webkit-animation-name: bounceInDown;
+        -moz-animation-name: bounceInDown;
+        -o-animation-name: bounceInDown;
+        animation-name: bounceInDown;
+    }
+
+    .effect.rollIn {
+        -webkit-animation-name: rollIn;
+        -moz-animation-name: rollIn;
+        -o-animation-name: rollIn;
+        animation-name: rollIn;
+    }
+
+    .effect.infiniteFading {
+        opacity: 0;
+        -webkit-animation: infiniteFading 2s infinite ease .4s;
+        -moz-animation: infiniteFading 2s infinite ease .4s;
+        -o-animation: infiniteFading 2s infinite ease .4s;
+        animation: infiniteFading 2s infinite ease .4s;
+    }
+
+    .effect.zoomIn {
+        -webkit-animation: zoomIn ease .4s;
+        -moz-animation: zoomIn ease .4s;
+        -o-animation: zoomIn ease .4s;
+        animation: zoomIn ease .4s;
+    }
+
+    .effect.zoomOut {
+        opacity: 0;
+        -webkit-animation: zoomOut ease .4s;
+        -moz-animation: zoomOut ease .4s;
+        -o-animation: zoomOut ease .4s;
+        animation: zoomOut ease .4s;
+    }
+
+    .effect.delay20ms {
+        -webkit-animation-delay: .20s;
+        -moz-animation-delay: .20s;
+        -o-animation-delay: .20s;
+        animation-delay: .20s;
+    }
+
+    .effect.delay40ms {
+        -webkit-animation-delay: .40s;
+        -moz-animation-delay: .40s;
+        -o-animation-delay: .40s;
+        animation-delay: .40s;
+    }
+
+    .effect.delay60ms {
+        -webkit-animation-delay: .60s;
+        -moz-animation-delay: .60s;
+        -o-animation-delay: .60s;
+        animation-delay: .60s;
+    }
+
+    .effect.delay80ms {
+        -webkit-animation-delay: .80s;
+        -moz-animation-delay: .80s;
+        -o-animation-delay: .80s;
+        animation-delay: .80s;
+    }
+
+    .effect.delay100ms {
+        -webkit-animation-delay: 1s;
+        -moz-animation-delay: 1s;
+        -o-animation-delay: 1s;
+        animation-delay: 1s;
+    }
+
+    .effect.delay120ms {
+        -webkit-animation-delay: 1.2s;
+        -moz-animation-delay: 1.2s;
+        -o-animation-delay: 1.2s;
+        animation-delay: 1.2s;
+    }
