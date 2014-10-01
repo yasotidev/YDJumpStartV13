@@ -1,0 +1,22 @@
+﻿nav ul {
+    text-transform: uppercase;
+    line-height: 38px;
+}
+
+nav a {
+    color: #444;
+    border-bottom: 2px solid #f9f9f9;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+    nav a:hover {
+        color: #444;
+        border-bottom-color: #46bcec;
+    }
+
+    nav a.selected {
+        border-bottom: 2px solid #46bcec;
+    }

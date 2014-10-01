@@ -1,0 +1,15 @@
+﻿body {
+    background: #f9f9f9;
+    font-family: 'OpenSans',Arial,sans-serif;
+    overflow: hidden;
+}
+
+    body ::-moz-selection {
+        background: #46bcec;
+        color: #f9f9f9;
+    }
+
+    body ::selection {
+        background: #46bcec;
+        color: #f9f9f9;
+    }

@@ -26,6 +26,11 @@ namespace Yd.Admin.Web
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
 
+            bundles.Add(new StyleBundle("~/Content/Vendorcss")
+                .Include("~/Content/navs.css")  
+                .Include("~/Content/navs.css")
+                     );
+
             // Définissez EnableOptimizations sur False pour le débogage. Pour plus d'informations,
             // visitez http://go.microsoft.com/fwlink/?LinkId=301862
             BundleTable.EnableOptimizations = true;
