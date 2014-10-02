@@ -36,8 +36,10 @@ namespace Yd.Admin.Web
                 .Include("~/Content/navs.css")       
                 .Include("~/Content/buttons.css")   
                 .Include("~/Content/footer.css")    
-                .Include("~/Content/Yd-response.css")    
+                .Include("~/Content/Yd-response.css")       
+                .Include("~/Content/effects.css")   
                 .Include("~/Content/foundation.min.css")
+                .Include("~/Content/foundation-icons/foundation-icons.css")
 
                      );
 

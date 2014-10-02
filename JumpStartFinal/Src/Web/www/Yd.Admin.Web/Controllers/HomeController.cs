@@ -12,6 +12,7 @@ using Yd.Admin.Web.Core.ViewModels;
 
 namespace Yd.Admin.Web.Controllers
 {
+     [Authorize]
     public class HomeController : Controller
     {
         private const string TenantIdClaimType = "http://schemas.microsoft.com/identity/claims/tenantid";
@@ -28,7 +29,7 @@ namespace Yd.Admin.Web.Controllers
 
        
 
-        [Authorize]
+       
         public async Task<ActionResult> UserProfile()
         {
             string tenantId = ClaimsPrincipal.Current.FindFirst(TenantIdClaimType).Value;

@@ -32,5 +32,7 @@ namespace Yd.Server.Core.Data
         public DbSet<Calendar> Calendars { get; set; }
         public DbSet<HolidayCalendar> HolidayCalendars { get; set; }
         public DbSet<Vaccation> Vaccations { get; set; }
+
+        public System.Data.Entity.DbSet<Yd.Server.Core.Model.JobTitle> JobTitles { get; set; }
     }
 }
