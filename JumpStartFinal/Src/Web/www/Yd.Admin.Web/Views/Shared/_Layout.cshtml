@@ -7,7 +7,17 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Styles.Render("~/Content/Vendorcss")
-    @Scripts.Render("~/bundles/modernizr")
+            @Scripts.Render("~/bundles/modernizr")
+            <link href="~/Content/foundation-icons/foundation-icons.css" rel="stylesheet" />
+    <link href="~/Content/app.css" rel="stylesheet" />
+    <link href="~/Content/buttons.css" rel="stylesheet" />
+    <link href="~/Content/effects.css" rel="stylesheet" />
+
+    <link href="~/Content/footer.css" rel="stylesheet" />
+    <link href="~/Content/foundation.min.css" rel="stylesheet" />
+    <link href="~/Content/navs.css" rel="stylesheet" />
+    <link href="~/Content/normalize.css" rel="stylesheet" />
+    <link href="~/Content/Yd-response.css" rel="stylesheet" />
 </head>
 <body>
     <div id="workspace">
@@ -22,7 +32,7 @@
             </div>
             <div class="large-8 columns end">
 
-                <div class="inline-list">
+                <div class="inline-list" style="font-size: 12px;">
                     @Html.Partial("_LoginPartial")
                 </div>
                 <ul class="inline-list">

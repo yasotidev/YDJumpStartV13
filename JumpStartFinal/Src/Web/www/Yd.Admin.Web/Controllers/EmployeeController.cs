@@ -37,7 +37,7 @@ namespace Yd.Admin.Web.Controllers
         public ActionResult Create()
         {
             ViewBag.JobTitleId = new SelectList(db.JobTitles, "JobTitleId", "Name");
-            ViewBag.PersonId = new SelectList(db.Persons, "PersonId", "FirstName");
+            ViewBag.PersonId = new SelectList(db.Persons, "PersonId", "FullName");
             return View();
         }
 
@@ -56,7 +56,7 @@ namespace Yd.Admin.Web.Controllers
             }
 
             ViewBag.JobTitleId = new SelectList(db.JobTitles, "JobTitleId", "Name", employee.JobTitleId);
-            ViewBag.PersonId = new SelectList(db.Persons, "PersonId", "FirstName", employee.PersonId);
+            ViewBag.PersonId = new SelectList(db.Persons, "PersonId", "FullName", employee.PersonId);
             return View(employee);
         }
 
@@ -73,7 +73,7 @@ namespace Yd.Admin.Web.Controllers
                 return HttpNotFound();
             }
             ViewBag.JobTitleId = new SelectList(db.JobTitles, "JobTitleId", "Name", employee.JobTitleId);
-            ViewBag.PersonId = new SelectList(db.Persons, "PersonId", "FirstName", employee.PersonId);
+            ViewBag.PersonId = new SelectList(db.Persons, "PersonId", "FullName", employee.PersonId);
             return View(employee);
         }
 
@@ -91,7 +91,7 @@ namespace Yd.Admin.Web.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.JobTitleId = new SelectList(db.JobTitles, "JobTitleId", "Name", employee.JobTitleId);
-            ViewBag.PersonId = new SelectList(db.Persons, "PersonId", "FirstName", employee.PersonId);
+            ViewBag.PersonId = new SelectList(db.Persons, "PersonId", "FullName", employee.PersonId);
             return View(employee);
         }
 
